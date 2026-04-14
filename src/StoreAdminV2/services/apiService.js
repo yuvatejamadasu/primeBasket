@@ -1,6 +1,6 @@
 import api from '../../utils/api';
 
-const JSON_SERVER_BASE = 'http://localhost:4000';
+const JSON_SERVER_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 const LOCAL_PROFILE_URL = '/data/profile.json';
 
 // ─── Helpers ────────────────────────────────────────────────────────────────

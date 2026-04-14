@@ -10,12 +10,13 @@
  */
 
 // Change this to your real backend server URL when ready
-const BACKEND_URL = ""; 
+const BACKEND_URL = import.meta.env.VITE_API_URL || ""; 
 
 // json-server endpoints (data lives in db.json by default)
-const PRODUCTS_BASE  = "http://localhost:4000/products";
-const REVIEWS_BASE   = "http://localhost:4000/reviews";
-const PROFILE_BASE   = "http://localhost:4000/profile";
+const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:4000";
+const PRODUCTS_BASE  = `${baseUrl}/products`;
+const REVIEWS_BASE   = `${baseUrl}/reviews`;
+const PROFILE_BASE   = `${baseUrl}/profile`;
 
 export const API = {
   // ── Static JSON or Backend Endpoints ──────────────────────────────────

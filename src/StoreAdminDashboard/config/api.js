@@ -10,9 +10,10 @@
  */
 
 // json-server endpoints (data lives in db.json)
-const PRODUCTS_BASE  = "http://localhost:4000/products";
-const REVIEWS_BASE   = "http://localhost:4000/reviews";
-const PROFILE_BASE   = "http://localhost:4000/profile";
+const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:4000";
+const PRODUCTS_BASE  = `${baseUrl}/products`;
+const REVIEWS_BASE   = `${baseUrl}/reviews`;
+const PROFILE_BASE   = `${baseUrl}/profile`;
 
 export const API = {
   // ── Static JSON in /public/data/ ──────────────────────────────────────
